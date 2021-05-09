@@ -1,4 +1,5 @@
 ## Ejemplo sacado de https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
+## Salida: 2 0 1 3
 
 import algorithmx
 from algorithmx import http_server
