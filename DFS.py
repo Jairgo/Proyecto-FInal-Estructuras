@@ -1,7 +1,5 @@
 ## Ejemplo sacado de https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
 
-
-
 import algorithmx
 from algorithmx import http_server
 ###
@@ -10,6 +8,7 @@ import networkx as nx
 G = nx.Graph()
 #G = nx.fast_gnp_random_graph(10, 0.3, seed=50)
 #G.add_edge("a", "b", weight=7)
+
 nx.add_path(G, [2,0])
 nx.add_path(G, [0,1])
 nx.add_path(G, [1,3])
