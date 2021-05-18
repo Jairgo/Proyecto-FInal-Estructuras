@@ -26,15 +26,15 @@ nx.set_node_attributes(G, False, 'seen')
 
 ###
 # Create a new HTTP server on port 5050
-#server = http_server(port=5050)
-#canvas = server.canvas()
+server = http_server(port=5050)
+canvas = server.canvas()
 # Create a new canvas
 ###
 
 def start():
-    #canvas.nodes(G.nodes).add()
-    #canvas.edges(G.edges).add()
-    #canvas.pause(1)
+    canvas.nodes(G.nodes).add()
+    canvas.edges(G.edges).add()
+    canvas.pause(1)
     bfs(0)
 
 def bfs(n):
@@ -44,28 +44,38 @@ def bfs(n):
 
     while queue:
       n = queue.pop(0)
-      print(n, end = " ")
+      #print(n, end = " ")
 
-        #canvas.node(n).highlight().size('1.25x') # Hace grande el circulo
-        #canvas.node(n).color('blue')    # Colorea de azul el circulo
-        #canvas.pause(0.5) # Se espera medio segundo antes de seguir
-
+      #canvas.node(n).highlight().size('1.25x') # Hace grande el circulo
+      #canvas.node(n).color('blue')    # Colorea de azul el circulo
+      #canvas.pause(0.5) # Se espera medio segundo antes de seguir
+      #canvas.edge((0, 1)).traverse('red')
       for n2 in G.neighbors(n):
           if G.nodes[n2]['seen'] == False:
+              a = n
+              b = n2
+              colorear(a,b)
               queue.append(n2)
               G.nodes[n2]['seen'] = True
                 #continue
-
-            #canvas.edge((n, n2)).traverse('red').pause(0.5)
+              #print("va de ", n ," a " , n2)
+              
             #bfs(n2) # DFS on neighbor
-            #canvas.edge((n2, n)).traverse('blue').pause(0.5)
-            #canvas.node(n).highlight().size('1.25x').pause(0.5)
+            ##canvas.edge((n2, n)).traverse('blue').pause(0.5)
+            ##canvas.node(n).highlight().size('1.25x').pause(0.5)
+
+
+def colorear(n,n2):
+    canvas.node(n).highlight().size('1.25x') # Hace grande el circulo
+    canvas.node(n).color('blue')    # Colorea de azul el circulo
+    canvas.pause(0.5) # Se espera medio segundo antes de seguir
+    canvas.edge((n, n2)).traverse('red')
 
 start()
 # A 'start' message is sent by the client whenever the
 # user clicks the start or restart button
-#canvas.onmessage('start', start)
+canvas.onmessage('start', start)
 
 # Start the server, blocking all further execution on
 # the current thread. Use 'ctrl-c' to exit the script.
-#server.start()
+server.start()
