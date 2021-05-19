@@ -16,8 +16,13 @@ def start():
     canvas.pause(0.5)
     canvas.nodes([3]).add()
     canvas.node(3).highlight().size('2.25x').pause(0.5) #Resalta el nodo
+    canvas.edge((2, 3)).add(directed=True)
     canvas.edge((2, 3)).traverse('blue') #Dibuja linea en azul
-    canvas.node(2).color('red').pause(1).remove().pause(1)
+    canvas.pause(2.5)
+    canvas.node(2).color('red').pause(2.5).remove().pause(2)
+    canvas.node(1).highlight().size('2.25x').pause(1.5) #Resalta el nodo
+    canvas.node(3).highlight().size('2.25x').pause(1.5) #Resalta el nodo
+    canvas.edge((1, 3)).add(directed=True)
     canvas.edge((1, 3)).traverse('blue') #Dibuja linea en azul
     canvas
 
