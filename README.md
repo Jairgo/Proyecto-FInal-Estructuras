@@ -1,7 +1,12 @@
 # Proyecto-FInal-Estructuras
 
-#Comandos a instalar 
+SE INSTALARON LAS LIBRERÍAS:
+- NetworkX
+- AlorithmX
 
-python -m pip install algorithmx
+# Instalación
+Para instalar networX:
+   --pip install networkx
 
-
+Para instalar AlgorithmX:
+   --python -m pip install algorithmx
