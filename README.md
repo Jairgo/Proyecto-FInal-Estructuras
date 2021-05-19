@@ -6,7 +6,7 @@ SE INSTALARON LAS LIBRERÍAS:
 
 # Instalación
 Para instalar networX:
-   --pip install networkx
+   pip install networkx
 
 Para instalar AlgorithmX:
-   --python -m pip install algorithmx
+   python -m pip install algorithmx
