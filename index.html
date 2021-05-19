@@ -49,23 +49,25 @@
             }
             .title-logo {
                 display: flex;
-                width: auto;
-                height: 20vh;
-                /padding-right: 10px;/
+                width: 180px;
+                height: auto;
                 fill: white;
+                margin-left: 5vw;
             }
             .title-text {
                 color: white;
                 font-weight: 300;
                 font-size: 20px;
                 font-family: "Open Sans", sans-serif;
+                align-items: center;
+                text-align: center;
             }
             .github-logo {
                 color: white;
                 font-size: 60px;
                 text-decoration: none;
-                margin-left: auto;
-                margin-right: auto;
+                margin-right: 5vw;
+                width: 180px;
             }
 
             .output {
@@ -104,13 +106,26 @@
 
     <body onresize="resize()">
         <div class="header">
-            <div class="github-logo">
+            <div class="title-logo">
+                <img src="https://portafolio.anahuacoaxaca.edu.mx/Content/images/logo-white.png">
+            </div>
+            <div>
+                <p class="title-text"><b>Proyecto Final - Estructuras de Datos<br>Guillermo Ramirez Tenorio <br>Jair Gómez Vásquez</b></p>
+            </div>
+            <div>
+                <a class="fab fa-github github-logo" href="https://github.com/Jairgo/Proyecto-FInal-Estructuras" target="_blank"></a>
+            </div>
+
+
+
+
+            <!--<div class="github-logo">
                 <img src="https://portafolio.anahuacoaxaca.edu.mx/Content/images/logo-white.png">
             </div>
             <div class="title">
                 <p class="title-text"><b>Proyecto Final - Estructuras de Datos<br>Guillermo Ramirez Tenorio <br>Jair Gómez Vásquez</b></p>
             </div>
-            <a class="fab fa-github github-logo" href="https://github.com/Jairgo/Proyecto-FInal-Estructuras" target="_blank"></a>
+            <a class="fab fa-github github-logo" href="https://github.com/Jairgo/Proyecto-FInal-Estructuras" target="_blank"></a>-->
         </div>
         <div class="output" id="output"></div>
         <div class="footer">
