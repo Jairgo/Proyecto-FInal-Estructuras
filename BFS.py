@@ -21,28 +21,48 @@ nx.add_path(G, [3,3])
 
 #nx.add_path(G, [1,3])
 """
+"""
+print("¿Cuántos nodos tiene el grafo?")
+n = int(input()) # 4 para este ejemplo
+i = 0
 
+while i < n:
+  G.add_node(i)
+  i+=1
+  #G.add_nodes_from([0, 1, 2, 3])
+"""
 
+print("¿Cuántos edges tiene el grafo?")
+n = int(input()) # 5 para este ejemplo
 
-
-#nx.set_node_attributes(G, False, 'seen')
-
-G.add_nodes_from([0,1, 2, 3])
-#G.add_edges_from([(1, 2), (2, 3), (3, 1)])
+while n:
+  x, y = [int(x) for x in input("Ingrese edge de U a V separados por un espacio: ").split()]
+  nx.add_path(G, [x,y])
+  #G.add_edge(x,y)
+  n-=1
+print("Los nodos de este grafo: " + str(list(G.nodes)) +"\n")
+inicio = int(input("Ingresa el vertice inicio: ")) # 2 para este ejemplo
+print("Ahora recarge la pagina y de clik en iniciar \n")
+"""
+#print(list(G.nodes))
+G.add_nodes_from([0, 1, 2, 3])
 G.add_edges_from([(0, 1), (0, 2), (1, 2), (2,0), (2,3)])
-print(G.size())
+#print(G.size())
+
+"""
 ###
 # Create a new HTTP server on port 5050
 server = http_server(port=5050)
-canvas = server.canvas()
+
 # Create a new canvas
+canvas = server.canvas()
 ###
 
 def start():
     canvas.nodes(G.nodes).add()
     canvas.edges(G.edges).add(directed=True)
     canvas.pause(1)
-    bfs(2)
+    bfs(inicio)
     
 
 def bfs(n):
@@ -54,31 +74,17 @@ def bfs(n):
 
     queue.append(n)
     visited[n] = True
-    #G.nodes[n]['seen'] = True
 
     while queue:
       n = queue.pop(0)
-      #print(n," ")
       texto.append(str(n))
-      #print (texto)
 
-      #canvas.node(n).highlight().size('1.25x') # Hace grande el circulo
-      #canvas.node(n).color('blue')    # Colorea de azul el circulo
-      #canvas.pause(0.5) # Se espera medio segundo antes de seguir
-      #canvas.edge((0, 1)).traverse('red')
       for n2 in G.neighbors(n):
           if visited[n2] == False:
-          #if G.nodes[n2]['seen'] == False:
               colorear(n,n2)
               queue.append(n2)
+              visited[n2] = True
               G.nodes[n2]['seen'] = True
-                #continue
-              #print(n2 ," ")
-              #print("va de ", n ," a " , n2)
-              
-            #bfs(n2) # DFS on neighbor
-            ##canvas.edge((n2, n)).traverse('blue').pause(0.5)
-            ##canvas.node(n).highlight().size('1.25x').pause(0.5)
     str1 = ' '.join(texto)
     finished(str1)
 
