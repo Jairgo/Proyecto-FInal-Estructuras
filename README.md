@@ -1,9 +1,9 @@
 # Proyecto-FInal-Estructuras
 
 #Comandos a instalar 
-#Algorithmx
+
 python -m pip install algorithmx
-#HTTP Server
+
 from algorithmx import http_server
 server = http_server(port=5050)
 canvas = server.canvas()
