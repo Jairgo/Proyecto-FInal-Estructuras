@@ -31,13 +31,13 @@
             .header {
                 height: 20vh;
                 min-height: 50px;
-                background-color: #153d77;
+                background-color: #323232;
 
                 display: flex;
-                justify-content: space-between;
+                justify-content:space-between;
                 align-items: center;
-                padding-left: 30px;
-                padding-right: 30px;
+                /*padding-left: 30px;
+                padding-right: 30px;*/
             }
             .title {
                 display: flex;
@@ -51,7 +51,7 @@
                 display: flex;
                 width: auto;
                 height: 20vh;
-                padding-right: 10px;
+                /padding-right: 10px;/
                 fill: white;
             }
             .title-text {
@@ -64,6 +64,8 @@
                 color: white;
                 font-size: 60px;
                 text-decoration: none;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .output {
@@ -74,7 +76,7 @@
             }
             .footer {
                 height: 15vh;
-                background-color: #153d77;
+                background-color: #323232;
                 padding-left: 30px;
                 padding-right: 30px;
                 display: flex;
@@ -91,7 +93,7 @@
             }
             .button-icon {
                 width: 30px;
-                font-size: 80px;
+                font-size: 40px;
                 color: #e9ecef;
             }
             .algorithmx {
@@ -102,20 +104,20 @@
 
     <body onresize="resize()">
         <div class="header">
+            <div class="github-logo">
+                <img src="https://portafolio.anahuacoaxaca.edu.mx/Content/images/logo-white.png">
+            </div>
             <div class="title">
-                <!--<img class="title-logo" src="https://p.kindpng.com/picc/s/767-7675592_mammal-canidae-dog-shiba-inu-carnivore-dog-breed.png?sanitize=true">-->
                 <p class="title-text"><b>Proyecto Final - Estructuras de Datos<br>Guillermo Ramirez Tenorio <br>Jair Gómez Vásquez</b></p>
             </div>
             <a class="fab fa-github github-logo" href="https://github.com/Jairgo/Proyecto-FInal-Estructuras" target="_blank"></a>
         </div>
         <div class="output" id="output"></div>
         <div class="footer">
-            <div class="button" style="margin-left: auto;" onclick="clickPlay()">
+            <div class="button" style="margin-left: auto;margin-right: auto;" onclick="clickPlay()">
                 <i class="fas fa-play button-icon" id="button-play"></i>
             </div>
-            <div class="button" style="margin-right: auto;" onclick="clickReset()">
-                <i class="fas fa-redo-alt button-icon" id="button-reset"></i>
-            </div>
+         
         </div>
     </body>
 
