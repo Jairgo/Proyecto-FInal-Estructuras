@@ -48,7 +48,7 @@ def start():
             band = 1
             break
         else:
-            y=1
+            y=x+1
             band=0
             canvas.edge((x,y)).add(directed=True)
         
