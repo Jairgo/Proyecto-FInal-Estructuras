@@ -8,7 +8,6 @@ class Graph:
         print(s,"<- primer S\n")
         visited = [False] * (max(self.graph) + 1)
         queue = []
-
         queue.append(s)
         visited[s] = True
 

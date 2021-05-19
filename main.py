@@ -5,7 +5,15 @@ from algorithmx import http_server
 server = http_server(port=5050)
 # Create a new canvas
 canvas = server.canvas()
-
+"""
+g = Graph()
+g.addEdge(0, 1)
+g.addEdge(0, 2)
+g.addEdge(1, 2)
+g.addEdge(2, 0)
+g.addEdge(2, 3)
+g.addEdge(3, 3)
+"""
 def start():
     canvas.nodes(range(1, 8)).add()
     canvas.edges([(i, i+1) for i in range(1, 7)]

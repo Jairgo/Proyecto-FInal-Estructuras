@@ -1,6 +1,6 @@
 ## Ejemplo sacado de https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/
 
-
+###DFS
 
 import algorithmx
 from algorithmx import http_server
